@@ -1,4 +1,4 @@
-import {  FC, RefAttributes,useState} from "react";
+import {  FC, RefAttributes} from "react";
 
 import { Swiper, SwiperProps, SwiperRef, SwiperSlide } from 'swiper/react';
 
@@ -17,7 +17,8 @@ interface ISwiperSinglePageProps{
 }
 
 const SwiperSinglePage: FC<ISwiperSinglePageProps & RefAttributes<SwiperRef> & SwiperProps> = ({item}) => {
-   const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const thumbsSwiper=null
+   
          return (
             
 
@@ -48,7 +49,7 @@ const SwiperSinglePage: FC<ISwiperSinglePageProps & RefAttributes<SwiperRef> & S
                </Swiper>
                <Swiper 
              
-                  onSwiper={setThumbsSwiper}
+                  //onSwiper={setThumbsSwiper}
                   loop={true}
                   spaceBetween={10}
                   slidesPerView={4}

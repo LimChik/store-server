@@ -1,10 +1,10 @@
-import React, {  } from 'react'
-import { useAppDispatch, useAppSelector } from '../../../hooks'
+
+import {  useAppSelector } from '../../../hooks'
 
 import ModalGoodBasketItem from '../ModalGoodBasketItem/ModalGoodBasketItem';
 import cl from './modalGoodBasketList.module.css'
 const ModalGoodBasket = () => {
-   const dispatch=useAppDispatch();
+   
    const goodItem=useAppSelector(elem=>elem.singlePage.goodItem);
 
   

@@ -20,6 +20,7 @@ const SizeFilter:FC<ISizeFilterProps> = memo(({getArrSize}) => {
 
 
   const handleContainerClick = (event: React.MouseEvent) => {
+    setSizeInputValue([])
     const target = event.target as HTMLElement;
     if (target.classList.contains(cl.filter__body__input__size)) {
 

@@ -46,7 +46,7 @@ const [brandSelected,setBrandSelected]=useState<string[]>([])//массив вы
 
 
 useEffect(()=>{
-   
+   setFilterItem([])
    const arrValue: number[] = [];
    filterItem.map((elem) => {
       arrValue.push(elem.price)    

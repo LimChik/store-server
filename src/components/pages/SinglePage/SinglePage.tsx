@@ -48,28 +48,28 @@ const SinglePage:FC<ISinglePageProps> = ({item}) => {
      'https://outmaxshop.ru/components/com_jshopping/files/img_products/30329/nike-air-max-plus-tn-30329-3.jpg'
    ]
 
-   const imageLoopMouseOver = (e: React.MouseEvent<HTMLImageElement, MouseEvent> )=>{
-      const target=e.target as HTMLImageElement;
-      const loopImage = document.querySelector(['.', cl.singlePage__body__loop__image].join('')) as  HTMLElement;
-      const loop = document.querySelector(['.', cl.singlePage__body__loop].join('')) as HTMLElement;
-      
-      const x = e.pageX - target.offsetLeft;
-      const y = e.pageY - target.offsetTop;
-      loop.style.cssText=`
-      display:block;
-      
-      `
-      loopImage.style.cssText=`
-         
-         height:100%;
-         width:100%;
-         background-image:url(${target.src});
-         position:absolute;
-         transform-origin:${x}px ${y}px;
-         scale:1.6;
-      `
-      
-   }
+   //const imageLoopMouseOver = (e: React.MouseEvent<HTMLImageElement, MouseEvent> )=>{
+   //   const target=e.target as HTMLImageElement;
+   //   const loopImage = document.querySelector(['.', cl.singlePage__body__loop__image].join('')) as  HTMLElement;
+   //   const loop = document.querySelector(['.', cl.singlePage__body__loop].join('')) as HTMLElement;
+   //   
+   //   const x = e.pageX - target.offsetLeft;
+   //   const y = e.pageY - target.offsetTop;
+   //   loop.style.cssText=`
+   //   display:block;
+   //   
+   //   `
+   //   loopImage.style.cssText=`
+   //      
+   //      height:100%;
+   //      width:100%;
+   //      background-image:url(${target.src});
+   //      position:absolute;
+   //      transform-origin:${x}px ${y}px;
+   //      scale:1.6;
+   //   `
+   //   
+   //}
  
    
   //const imageColorClick = (e: React.MouseEvent<HTMLImageElement, MouseEvent>)=>{
@@ -167,8 +167,8 @@ const SinglePage:FC<ISinglePageProps> = ({item}) => {
       const target=e.target as HTMLInputElement;
       setValueFormSize(target.value)
    }
-   const handleFormButtonAction=(e:React.MouseEvent)=>{
-      setSizeFormAction(prevstate=>[...prevstate,{
+   const handleFormButtonAction=()=>{
+      setSizeFormAction( [...sizeFormAction,{
          email:valueFormEmail,
          size:valueFormSize
       }])
