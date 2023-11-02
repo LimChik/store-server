@@ -39,6 +39,7 @@ const SinglePage:FC<ISinglePageProps> = ({item}) => {
       setProduct(item.filter((index) => String(index.id) == id));
       dispatch(selectModalActive(false));
       dispatch(stateButtonActive(false))
+      console.log('jopa')
      
    },[id])
    
