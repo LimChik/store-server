@@ -1,0 +1,6 @@
+.filter__body__price{
+   display: flex;
+}
+.filter__body__input{
+   flex:0 1 50%
+}  

@@ -1,0 +1,143 @@
+.reviews__form{
+padding: 40px 0 0 0;
+}
+
+span{
+   width: 80%;
+   margin:0 0 5px 0;
+   font-size: 14px;
+   font-weight: 300;
+   letter-spacing: .06em;
+}
+input{
+   padding: 10px 15px;
+   border: 0.5px solid #cbc5c5;
+}
+.form__text {
+   font-size: 16px;
+   font-weight: 800;
+   color:#000;
+   line-height: 1.2;
+   margin:0 0 20px 0;
+   text-transform: uppercase;
+}
+
+.form__body {
+   display: flex;
+}
+.form__body__personInfo{
+   flex-basis: 50%;
+   display: flex;
+   flex-direction: column;
+}
+.form__body__personInfo>*:not(:last-child){
+   margin:0 0 34px 0
+}
+
+
+.personInfo__name {
+   display: flex;
+   flex-direction: column;
+}
+
+.personInfo__name__input{
+   width:65%
+}
+
+.personInfo__profileVK {
+    display: flex;
+   flex-direction: column;
+}
+
+.personInfo__profileVK__input {
+    width:65%
+}
+
+.personInfo__email {
+    display: flex;
+   flex-direction: column;
+}
+
+.personInfo__email__input {
+     width:65%
+   }
+
+.personInfo__city {
+    display: flex;
+   flex-direction: column;
+}
+
+.personInfo__city__input {
+    width:65%
+}
+.form__body__rating{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.form__body__rating>*:not(:last-child){
+   margin:0 0 25px 0;
+}
+.rating__name{
+   font-size: 18px;
+   font-weight: 400;
+   line-height: 1.2;
+   color: rgb(108, 101, 101);
+   text-transform: uppercase;
+}
+
+.rating__stars {
+   display: flex;
+   align-items: center;
+}
+
+.rating__stars__container{
+display: flex;
+margin: 0 10px 0 15px;
+}
+
+
+
+
+
+.rating__star {
+      width: 20px;
+      height: 20px;
+      position: relative;
+      cursor: pointer;
+   
+    background-image: url('https://cdn-icons-png.flaticon.com/128/126/126482.png');
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+    margin: 0 10px 0 0 ;
+   
+}
+.light{
+   background-image: url('https://cdn.icon-icons.com/icons2/1077/PNG/96/star_77949.png');
+}
+.rating__stars span {
+   width: auto;
+}
+
+.rating__brand{
+display: flex;
+flex-direction: column;
+}
+.rating__brand span{
+
+}
+.rating__brand__input{
+     width:75%
+}
+.rating__message{
+display: flex;
+flex-direction: column;
+}
+.rating__message span{
+
+}
+.rating__message__input{
+width: 79%;
+}

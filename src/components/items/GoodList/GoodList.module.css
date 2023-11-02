@@ -1,0 +1,16 @@
+.goodList__body{
+   display: flex;
+   flex-wrap: wrap;
+   
+
+}
+.goodList__body > * {
+   margin: 0 10px 10px 10px ;
+   flex: 1 25%;
+}
+@media(max-width:766.99px){
+   .goodList__body > *{
+      flex: 1 1 50%;
+   }
+}
+

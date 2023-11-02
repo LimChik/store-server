@@ -1,0 +1,14 @@
+.product{
+   margin: 20px 0 0 0 ;
+background-color: #fff;
+}
+.product__container{
+   max-width: 1350px;
+   margin: 0 auto;
+   padding: 0 10px;
+}
+
+.product__body{
+   display: flex;
+
+}

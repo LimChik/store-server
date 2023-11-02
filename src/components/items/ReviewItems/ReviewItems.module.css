@@ -1,0 +1,88 @@
+.reviews{
+
+display: flex;
+}
+.reviews:not(:first-child){
+   border-top: 0.5px solid rgb(108, 101, 101);
+}
+.reviews__userInfo{
+flex-basis: 30%;
+display: flex;
+flex-direction: column;
+padding: 0 30px 0 0;
+}
+.reviews__userInfo> *:not(:last-child){
+   margin: 0 0 10px;
+}
+.reviews__userInfo__name{
+   
+   color: rgb(108, 101, 101);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: .06em;
+    line-height: 1.2;
+}
+.reviews__userInfo__rating{
+   display: flex;
+}
+.reviews__userInfo__rating__star{
+width: 20px;
+      height: 20px;
+      position: relative;
+      
+   
+    background-image: url('https://cdn-icons-png.flaticon.com/128/126/126482.png');
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+    margin: 0 10px 0 0 ;
+   
+}
+.light{
+   background-image: url('https://cdn.icon-icons.com/icons2/1077/PNG/96/star_77949.png');
+    background-repeat: no-repeat;
+    width: 20px;
+      height: 20px;
+      position: relative;
+    background-size: cover;
+}
+.reviews__userInfo__date{
+   color: rgb(108, 101, 101);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: .06em;
+    line-height: 1.2;
+}
+.reviews__userInfo__city{
+   color: rgb(108, 101, 101);
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: .06em;
+    line-height: 1.2;
+}
+
+.reviews__userMessage{
+   max-width: 70%;
+   display: flex;
+   flex-direction: column;
+}
+
+.reviews__userMessage__brandName{
+   font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: rgb(108, 101, 101);
+    text-transform: uppercase;
+    text-decoration: underline;
+    margin:0 0 20px 0;
+}
+
+.reviews__userMessage__message{
+   font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: #000;
+    letter-spacing: 0.2px;
+    margin: 0 0 20px 0;
+
+}

@@ -1,0 +1,273 @@
+.basketCheckout__container {
+       background-color: #fafafa;
+       
+}
+.basketCheckout__body {
+   
+   display: flex;
+   max-width: 1350px;
+       margin: 0 auto;
+       padding: 0px 10px;
+}
+.basketCheckout__addressDelivery {}
+.basketCheckout__body__placing{
+   display: flex;
+   flex-direction: column;
+   flex-basis: 55%;
+   padding: 15px 0 0 20px;
+   background-color: #fff;
+   margin: 0 20px 0 0 ;
+}
+.basketCheckout__body__placing> *:not(:last-child){
+   margin: 0 0 20px 0;
+}
+ .placing {}
+.placing__title {
+   margin: 0 0 35px;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000;
+}
+.placing__email {
+  
+}
+.placing__email__text {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: inherit;
+    text-transform: uppercase;
+}
+.placing__email__input {
+   display: block;
+    width: 80%;
+    padding: 9px 10px;
+    font-size: inherit;
+    line-height: inherit;
+    border: 1px solid #a3a3a3;
+    outline: none;
+    border-radius: 0;
+}
+.placing__name {}
+.placing__name__text {
+   display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: inherit;
+    text-transform: uppercase;
+}
+.placing__name__input {
+   display: block;
+    width: 80%;
+    padding: 9px 10px;
+    font-size: inherit;
+    line-height: inherit;
+    border: 1px solid #a3a3a3;
+    outline: none;
+    border-radius: 0;
+}
+.placing__birthday {}
+.placing__birthday__text {
+   display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: inherit;
+    text-transform: uppercase;
+}
+.placing__birthday__input {
+   display: block;
+    width: 80%;
+    padding: 9px 10px;
+    font-size: inherit;
+    line-height: inherit;
+    border: 1px solid #a3a3a3;
+    outline: none;
+    border-radius: 0;
+}
+.placing__number {}
+.placing__number__text {
+   display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: inherit;
+    text-transform: uppercase;
+}
+.placing__number__input {
+   display: block;
+    width: 80%;
+    padding: 9px 10px;
+    font-size: inherit;
+    line-height: inherit;
+    border: 1px solid #a3a3a3;
+    outline: none;
+    border-radius: 0;
+}
+.placing__location {
+   display: flex;
+   width: 82%;
+   gap: 20px;
+   
+}
+.placing__location__country {
+   width: 50%;
+}
+.placing__location__country__text {
+   display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: inherit;
+    text-transform: uppercase;
+}
+.placing__location__country__input {
+    display: block;
+    width: 95%;
+    padding: 9px 10px;
+    font-size: inherit;
+    line-height: inherit;
+    border: 1px solid #a3a3a3;
+    outline: none;
+    border-radius: 0;
+}
+.placing__location__city {
+   width: 50%;
+}
+.placing__location__city__text {
+   display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: inherit;
+    text-transform: uppercase;
+}
+.placing__location__city__input {
+    display: block;
+    width: 95%;
+    padding: 9px 10px;
+    font-size: inherit;
+    line-height: inherit;
+    border: 1px solid #a3a3a3;
+    outline: none;
+    border-radius: 0;
+}
+.placing__street {
+   
+}
+.placing__street__text {
+   display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: inherit;
+    text-transform: uppercase;
+}
+.placing__street__input {
+   display: block;
+    width: 80%;
+    padding: 9px 10px;
+    font-size: inherit;
+    line-height: inherit;
+    border: 1px solid #a3a3a3;
+    outline: none;
+    border-radius: 0;
+}
+.placing__building {
+   display: flex;
+   justify-content: space-between;
+   width: 80%;
+
+}
+.placing__building__home {
+   width: 26.66%;
+}
+.placing__building__home__text {
+   display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: inherit;
+    text-transform: uppercase;
+}
+.placing__building__home__input {}
+.placing__building__apartment {
+    width: 26.66%;
+}
+.placing__building__apartment__text {
+   display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: inherit;
+    text-transform: uppercase;
+}
+.placing__building__apartment__input {}
+.placing__building__index {
+    width: 26.66%;
+}
+.placing__building__index__text {
+   display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: inherit;
+    text-transform: uppercase;
+}
+.placing__building__index__input {}
+.placing__maps {}
+.placing__comment{}
+.placing__comment__text{
+   display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-weight: 400;
+    font-size: inherit;
+    text-transform: uppercase;
+}
+.placing__comment  textarea{
+   display: block;
+    width: 80%;
+    padding: 9px 11px;
+    font-size: inherit;
+    line-height: inherit;
+    border: 1px solid #a3a3a3;
+    outline: none;
+    border-radius: 0;
+}
+.button{
+   display: block;
+    width: 83%;
+   
+    
+    color: #fff;
+    font: 700 14px "Open Sans";
+   
+    text-align: center;
+    text-transform: uppercase;
+    background: #e31e24;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+    transition: background-color .3s;
+
+    margin-top: 33px;
+    padding: 10px 0;
+    
+    line-height: 20px;
+    letter-spacing: 0;
+}
+.button:hover{
+   background-color: green;
+}
+.basketCheckout__body__cards{
+   flex-basis: 45%;
+} 
+.cards{
+   background-color: #fff;
+}
+.cards__paymentSum{}

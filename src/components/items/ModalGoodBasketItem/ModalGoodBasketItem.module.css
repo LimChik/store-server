@@ -1,0 +1,65 @@
+.modalGoodBasket__body{
+   width: 100%;
+   display: flex;
+   margin: 0 0 10px 0;
+
+}
+
+.modalGoodBasket__body__image{
+   width: 55%;
+   position: relative;
+   height: 90px;
+   
+   
+}
+.modalGoodBasket__body__image img {
+   position: absolute;
+   top: 0;
+   left: 0;
+     width: 136px;
+   height: 100%;
+   object-fit: cover;
+}
+.modalGoodBasket__body__info{
+   width: 40%;
+   display: flex;
+   flex-direction: column;
+   margin: 0 0 0 10px;
+}
+.modalGoodBasket__body__name{
+   margin: 0 0 5px;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   overflow: hidden;
+   font-size: 12px;
+   font-weight: 500;
+   line-height: 1.2;
+   color:rgb(108, 101, 101);
+}
+.modalGoodBasket__body__brand{
+   margin: 0 0 8px 0;
+   font-size: 12px;
+   font-weight: 700;
+   line-height: 1.2;
+   color:rgb(108, 101, 101);
+}
+.modalGoodBasket__body__size{
+    margin: 0 0 2px;
+    font-size: 10px;
+   font-weight: 400;
+   line-height: 1.2;
+   color:rgb(108, 101, 101);
+}
+.modalGoodBasket__body__count{
+    margin: 0 0 7px 0 ;
+    font-size: 10px;
+   font-weight: 400;
+   line-height: 1.2;
+   color:rgb(108, 101, 101);
+}
+.modalGoodBasket__body__price{
+   font-size: 16px;
+   font-weight: 600;
+   line-height: 1.2;
+   color:rgb(108, 101, 101);
+}

@@ -1,0 +1,21 @@
+.filter__body__size{
+   margin: 20px 0 0 0 ;
+}
+.filter__body__sizes{
+   display: flex;
+   flex-wrap: wrap;
+   gap: 5px;
+}
+.filter__body__input__size{
+flex:0 1 23.9%;
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 10px;
+border: 1px solid grey;
+}
+
+.isActive{
+   border-bottom: 2px solid black;
+}
