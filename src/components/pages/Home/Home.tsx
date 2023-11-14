@@ -2,14 +2,14 @@ import {FC} from 'react';
 
 import './Home.css';
 import SwiperGoods from '../../Swiper/SwiperGoods';
- import img from  '../../../image/home__preview-background.jpg'
+
 import  imgOffer from '../../../image/offers__card/support.png';
 const Home: FC = () => {
    return (
       <>
          <div className='preview'>
-            <div className="preview__image _ibg">
-               <img src={img} alt='nike' />
+            <div className="preview__image ">
+               <img src={'https://kartinki.pics/uploads/posts/2021-07/1626747694_1-kartinkin-com-p-krossovki-fon-krasivo-1.jpg'} alt='nike' />
             </div>
             <div className="preview__container _container">
 

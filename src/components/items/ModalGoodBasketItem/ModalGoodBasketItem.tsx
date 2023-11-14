@@ -14,7 +14,7 @@ const ModalGoodBasketItem: React.FC<ModalGoodBasketItemProps> = ({ item }) => {
             <div className={cl.modalGoodBasket__body} >
 
                <div className={cl.modalGoodBasket__body__image}>
-                  <img src={item.image} alt={item.name} />
+                  <img src={item.imageArrPreview[0]} alt={item.name} />
                </div>
                <div className={cl.modalGoodBasket__body__info}>
                   <div className={cl.modalGoodBasket__body__name}>{item.name}</div>

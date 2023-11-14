@@ -179,11 +179,11 @@
 .placing__building {
    display: flex;
    justify-content: space-between;
-   width: 80%;
+   width: 78%;
 
 }
 .placing__building__home {
-   width: 26.66%;
+   width: 140px
 }
 .placing__building__home__text {
    display: block;
@@ -193,9 +193,12 @@
     font-size: inherit;
     text-transform: uppercase;
 }
-.placing__building__home__input {}
+.placing__building__home__input {
+   width: 100%;
+   outline:none;
+}
 .placing__building__apartment {
-    width: 26.66%;
+    width: 140px
 }
 .placing__building__apartment__text {
    display: block;
@@ -205,9 +208,12 @@
     font-size: inherit;
     text-transform: uppercase;
 }
-.placing__building__apartment__input {}
+.placing__building__apartment__input {
+   width: 100%;
+    outline:none;
+}
 .placing__building__index {
-    width: 26.66%;
+    width: 140px
 }
 .placing__building__index__text {
    display: block;
@@ -217,7 +223,10 @@
     font-size: inherit;
     text-transform: uppercase;
 }
-.placing__building__index__input {}
+.placing__building__index__input {
+   width: 100%;
+    outline:none;
+}
 .placing__maps {}
 .placing__comment{}
 .placing__comment__text{

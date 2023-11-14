@@ -1,9 +1,9 @@
 import React,{FC, useState,useEffect} from 'react';
 import cl from './SinglePage.module.css'
-import { useParams } from 'react-router-dom';
+import {  useParams } from 'react-router-dom';
 import { IItem } from '../../../type/Item';
 
-import ButtonSize from '../../../UI/ButtonSIze/ButtonSize';
+import ButtonSize from '../../UI/ButtonSIze/ButtonSize';
 import SwiperSinglePage from '../../Swiper/SwiperSinglePage/SwiperSinglePage';
 
 import RowInfoItem from './row-info/RowInfoItem';
@@ -34,23 +34,21 @@ const SinglePage:FC<ISinglePageProps> = ({item}) => {
    const dispatch=useAppDispatch();
 
    
+  
    
    useEffect(()=>{
       setProduct(item.filter((index) => String(index.id) == id));
       dispatch(selectModalActive(false));
       dispatch(stateButtonActive(false))
-      console.log('jopa')
+      
      
    },[id])
    
-   const imageArrPreview=[
-     'https://outmaxshop.ru/components/com_jshopping/files/img_products/30329/nike-air-max-plus-tn-30329-1.jpg',
-     'https://outmaxshop.ru/components/com_jshopping/files/img_products/30329/nike-air-max-plus-tn-30329-2.jpg',
-     'https://outmaxshop.ru/components/com_jshopping/files/img_products/30329/nike-air-max-plus-tn-30329-3.jpg'
-   ]
+  
 
    //const imageLoopMouseOver = (e: React.MouseEvent<HTMLImageElement, MouseEvent> )=>{
    //   const target=e.target as HTMLImageElement;
+   //
    //   const loopImage = document.querySelector(['.', cl.singlePage__body__loop__image].join('')) as  HTMLElement;
    //   const loop = document.querySelector(['.', cl.singlePage__body__loop].join('')) as HTMLElement;
    //   
@@ -58,6 +56,10 @@ const SinglePage:FC<ISinglePageProps> = ({item}) => {
    //   const y = e.pageY - target.offsetTop;
    //   loop.style.cssText=`
    //   display:block;
+   //   position:absolute;
+   //   width:100%;
+   //  
+   //   
    //   
    //   `
    //   loopImage.style.cssText=`
@@ -65,9 +67,11 @@ const SinglePage:FC<ISinglePageProps> = ({item}) => {
    //      height:100%;
    //      width:100%;
    //      background-image:url(${target.src});
-   //      position:absolute;
+   //      position:fixed;
    //      transform-origin:${x}px ${y}px;
-   //      scale:1.6;
+   //      scale:1.3;
+   //      top:0;
+   //      left:0
    //   `
    //   
    //}
@@ -177,16 +181,17 @@ const SinglePage:FC<ISinglePageProps> = ({item}) => {
    }
 
    const addGoodToBusket=(e:React.MouseEvent)=>{
-   
+   e.preventDefault()
        dispatch(addBusket(product[0]));
        dispatch(addPriceBasket(product[0]))
       dispatch(selectModalActive(true))
       dispatch(stateButtonActive(true))
        const target=e.target as HTMLElement;
-      target.innerHTML = `Перейти в &nbsp` +`<a href='/basket'>корзину</a>`
+      target.innerHTML = `Перейти в &nbsp` +`<a onClick={toCheckout} href='#'>корзину</a>`
          
       target.classList.add(cl.buttonDisable) 
       setDisableButton(true)
+     
 
    }
    
@@ -208,8 +213,8 @@ const SinglePage:FC<ISinglePageProps> = ({item}) => {
             }
                
                <div className={cl.singlePage__body__container}>
-                  <div  className={cl.singlepage__body__image}>
-                     <SwiperSinglePage item={imageArrPreview}/>
+               <div  className={cl.singlepage__body__image}>
+                     <SwiperSinglePage item={elem.imageArrPreview}/>
                      
                  
                   </div>
@@ -217,7 +222,7 @@ const SinglePage:FC<ISinglePageProps> = ({item}) => {
                   <div className={[cl.singlepage__body__info, ' info'].join(' ')}>
                      
                   <div className={cl.singlePage__body__loop}  >
-                     <div className={cl.singlePage__body__loop__image}></div>
+                     <div  className={cl.singlePage__body__loop__image}></div>
                      </div>
                         
                      <div className={cl.info__name}>{elem.name}</div>
@@ -240,16 +245,16 @@ const SinglePage:FC<ISinglePageProps> = ({item}) => {
                               <img src=' https://www.pravilamag.ru/upload/img_cache/55b/55b1e82f3e6cd1b6ea8f0867f9da5088_ce_960x599x0x0_cropped_666x444.jpg' alt="" />
                            </div>
                            <div className={cl.singlePage__body__choiceColor__image}>
-                              <img src={elem.image} alt="2" />
+                              <img src={elem.imageArrPreview[0]} alt="2" />
                            </div>
                            <div className={cl.singlePage__body__choiceColor__image}>
-                              <img src={elem.image} alt="3" />
+                           <img src={elem.imageArrPreview[0]} alt="3" />
                            </div>
                            <div className={cl.singlePage__body__choiceColor__image}>
-                              <img src={elem.image} alt="4" />
+                           <img src={elem.imageArrPreview[0]} alt="4" />
                            </div>
                            <div className={cl.singlePage__body__choiceColor__image}>
-                              <img src={elem.image} alt="5" />
+                           <img src={elem.imageArrPreview[0]} alt="5" />
                            </div>
                         </div>
 

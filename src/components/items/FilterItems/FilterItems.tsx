@@ -9,11 +9,14 @@ interface IFilterItemsProps{
    item:IItem[];
    filterCard:(filterItem:IItem[])=>void;
    isChecked:()=>void;
+   setPaginationItem: React.Dispatch<React.SetStateAction<number>>
   
 }
-const FilterItems:FC<IFilterItemsProps> = memo(({item,filterCard,isChecked}) => {
+const FilterItems:FC<IFilterItemsProps> = memo(({item,filterCard,isChecked,setPaginationItem}) => {
 
-const [filterItem,setFilterItem]=useState<IItem[]>([])
+//const [filterItem,setFilterItem]=useState<IItem[]>([]);
+const filterItem:IItem[]=[];
+
 
 const [minInputValue,setMinInputValue]=useState('');//Минимальное значение введеного значения инпута для цены кроссовок
 const [maxInputValue, setMaxInputValue] = useState('');//Максимальное значение введеного значения инпута для цены кроссовок
@@ -29,6 +32,7 @@ const [brandSelected,setBrandSelected]=useState<string[]>([])//массив вы
       setMinInputValue('');
       setMaxInputValue('');
       isChecked();
+      setPaginationItem(Math.ceil(item.length/10))
    
     
    }
@@ -46,7 +50,7 @@ const [brandSelected,setBrandSelected]=useState<string[]>([])//массив вы
 
 
 useEffect(()=>{
-   setFilterItem([])
+   //setFilterItem([])
    const arrValue: number[] = [];
    filterItem.map((elem) => {
       arrValue.push(elem.price)    

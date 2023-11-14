@@ -7,6 +7,8 @@ type Todo = {
    modalBasketActive:boolean;
    buttonActive:boolean;
    sumPrice:number;
+   minIdItem:number;
+   maxIdItem:number;
 }
 
 
@@ -16,7 +18,9 @@ const initialState: Todo = {
    goodItem:[],
    modalBasketActive:false,
    buttonActive:false,
-   sumPrice:0
+   sumPrice:0,
+   minIdItem:0,
+   maxIdItem:10
 }
 
 const singlePageSlice = createSlice({
@@ -80,6 +84,13 @@ const singlePageSlice = createSlice({
             return item;
          });
       },
+      paginateGoodItem(state,action:PayloadAction<number>){
+         if(action.payload===1){
+            state.maxIdItem = 10 * action.payload;
+         }
+         state.maxIdItem=10*action.payload;
+         state.minIdItem=(action.payload-1)*10
+      }
       
       
    }
@@ -93,7 +104,8 @@ export const {
    reducePriceBasket,
    deleteGoodBasket,
    reduceCountBasketItem,
-   addCountBasketItem
+   addCountBasketItem,
+   paginateGoodItem
 } = singlePageSlice.actions;
 
 export default singlePageSlice.reducer;

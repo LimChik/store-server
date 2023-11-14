@@ -99,3 +99,87 @@
 .subscribe__button{
  background-color: #2d2d2d;
 }
+
+@media(max-width:1150px){
+   .footer__body{
+      justify-content: space-around;
+   }
+   .footer__product{
+    margin:0 5px 0 0 
+   }
+   .footer__payments{
+      width: 22%;
+   }
+}
+@media(max-width:1000px){
+ .footer{
+   background-color: #fff;
+
+ }
+ .footer__body{
+   flex-direction: column;
+   
+ }
+ .footer__product>*,.footer__payments>*,.footer__subscribe>*,.product__rules>*{
+   color:#000
+ }
+ .footer__subscribe{
+   order: 1;
+   width: 100%;
+   margin: 0 0 20px 0;
+ }
+ .subscribe__text{
+   text-align: center;
+   margin: 0 0 5px 0;
+ }
+ .footer__subscribe > span{
+   display: none;
+ }
+ .subscribe__email{
+   width: 70%;
+   margin: 0;
+   border: 0.5px solid grey;
+   background-color: #fff;
+ }
+ .subscribe__button{
+   width: 30%;
+   border: none;
+   background-color: #46e80b;
+   color: #fff;
+   
+ }
+ .foooter__logo{
+   order: 4;
+   text-align: center;
+   background-color: #2d2d2d;
+   width: 100%;
+   padding: 50px 0;
+ }
+ .footer__product{
+   order: 2;
+   width: 100%;
+ }
+
+ .product__rules>*{
+   width: 100%;
+  padding: 5px 0 5px 5px;
+   margin: 0;
+   border-bottom: 1px solid grey;
+   color: #231815;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+ }
+ .product__rules__delivery{
+   border-top: 1px solid grey
+ }
+ .product__rules:last-child{
+   border-bottom: 1px solid grey;
+ }
+ .footer__payments{
+   order: 3;
+   width: 100%;
+ }
+ 
+}

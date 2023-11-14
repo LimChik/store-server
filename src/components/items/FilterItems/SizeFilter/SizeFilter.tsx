@@ -1,6 +1,6 @@
 import React ,{FC,memo,useState}from 'react'
 import cl from './SizeFilter.module.css';
-import ButtonSize from '../../../../UI/ButtonSIze/ButtonSize';
+import ButtonSize from '../../../UI/ButtonSIze/ButtonSize';
 
 interface ISizeFilterProps{
   getArrSize:(value: React.SetStateAction<number[]>)=>void

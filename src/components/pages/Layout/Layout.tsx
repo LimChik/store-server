@@ -20,6 +20,13 @@ const  Layout :FC = () => {
     navigate('/checkout');
     
   }
+  const burgerActive = () => {
+    const navElement=document.querySelector('nav') as HTMLElement;
+    navElement.classList.toggle('burger__active');
+    console.log(navElement)
+
+    
+  }
   const showModalBasket=(e:React.MouseEvent)=>{
     const target=e.target as HTMLElement;
     if (target.closest(`.${cl.modalGoodBasketList__container}`) && buttonAddForBasket){
@@ -38,25 +45,37 @@ const  Layout :FC = () => {
    if((target.closest(`.${cl.modalGoodBasketList__button}`))){
     dispatch(selectModalActive(false))
    }
+   if(target.closest(`.burger__menu`)){
+    burgerActive()
+   }
+   if(target.closest(`.header__basket-product`)){
+     dispatch(selectModalActive(!isModalBasketActive))
+   }
   }
+ 
   return (
     <div onClick={showModalBasket} >
-      <header className={'header'}>
+      
+      <header className={'header'} >
+        <div className='burger__menu'><span></span></div>
          <div className="header__logo">
               <img src={img} alt="" />
          </div>
-           <Link to='about'> О нас</Link>
-           <Link to=''> На главную</Link>
-           <Link to='product'> Наши товары</Link>
-           <Link to='contacts'> Контакты</Link>
+         <nav>
+          <Link to='about'> О нас</Link>
+          <Link to=''> На главную</Link>
+          <Link to='product'> Наши товары</Link>
+          <Link to='contacts'> Контакты</Link>
+         </nav>
+          
            <div className='header__basket-product'>
-          <div className="header__basket-product__number">{basketProduct==0? '':basketProduct}</div>
+              <div className="header__basket-product__number">{basketProduct==0? '':basketProduct}</div>
 
-          {isModalBasketActive && <div className={cl.modalGoodBasketList__container}>
-            <ModalGoodBasket/>
-            <hr style={{ margin: '0 5px 10px' }} />
-            <button onClick={pathToBasketPage} className={cl.modalGoodBasketList__button}>Оформить заказ</button>
-          </div>}
+              {isModalBasketActive && <div className={cl.modalGoodBasketList__container}>
+                <ModalGoodBasket/>
+                <hr style={{ margin: '0 5px 10px' }} />
+                <button onClick={pathToBasketPage} className={cl.modalGoodBasketList__button}>Оформить заказ</button>
+              </div>}
 
            </div>
         </header>

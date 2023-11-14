@@ -43,7 +43,7 @@ const CheckoutItem:FC<CheckoutItemProps> = ({chooseItem}) => {
     <div className={cl.checkout__body} >
       <div className={cl.checkout__body__deleteGood} onClick={deleteGood}></div>
       <div className={cl.checkout__body__image}>
-        <img src={chooseItem.image} alt="fafs" />
+        <img src={chooseItem.imageArrPreview[0]} alt="fafs" />
       </div>
       <div className={cl.checkout__description}>
         <div className={cl.checkout__description__name}>{chooseItem.name}</div>
